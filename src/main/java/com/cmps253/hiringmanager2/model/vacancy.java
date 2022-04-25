@@ -16,8 +16,7 @@ public class vacancy {
 
     public vacancy(){}
 
-    public vacancy(long id, String title, LocalDateTime time) {
-        this.id = id;
+    public vacancy(String title, LocalDateTime time) {
         this.title = title;
         this.time = time;
     }

@@ -2,7 +2,9 @@ package com.cmps253.hiringmanager2.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Entity
+@Table(name="CANDIDATE")
 public class candidate implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
