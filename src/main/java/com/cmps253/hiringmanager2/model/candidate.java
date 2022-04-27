@@ -19,8 +19,7 @@ public class candidate implements Serializable {
 
     public candidate() {}
 
-    public candidate(long id, String first_name, String last_name, String email, String phone_number) {
-        this.id = id;
+    public candidate(String first_name, String last_name, String email, String phone_number) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
