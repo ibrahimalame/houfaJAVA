@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -38,7 +39,7 @@ public class vacancyResource {
     @PostMapping(path="/add")
     //@RequestMapping(value="/add/{id}",method = RequestMethod.POST)
     public ResponseEntity<vacancy> addVacancy(@RequestBody vacancy vac) {//  @RequestParam String title,@RequestParam LocalDateTime date) {
-        vac.setTime(LocalDateTime.now());
+        //vac.setTime(LocalDateTime.now());
         vacancy updateVacancy = vacancyservice.updateVacancy(vac);//LocalDateTime.now()));
         return new ResponseEntity<>(updateVacancy, HttpStatus.OK);
     }
@@ -49,8 +50,10 @@ public class vacancyResource {
     }
     public static void main(String[] str){
         String titre="mbaied";
+        String description = "kjgkjhgh";
         LocalDateTime date = LocalDateTime.now();
-        vacancy myvacancy = new vacancy(titre,date);
+        //vacancy myvacancy = new vacancy(titre,description,date);
+        //System.out.println(myvacancy);
 
     }
 }

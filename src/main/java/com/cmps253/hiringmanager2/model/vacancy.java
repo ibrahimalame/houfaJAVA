@@ -1,6 +1,7 @@
 package com.cmps253.hiringmanager2.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,13 +13,39 @@ public class vacancy {
     @Column(nullable = false)
     private String title;
     @Column(nullable = false)
+    private String description;
+    @Column(nullable =true)
     private LocalDateTime time;
+    @Column(nullable = false)
+    private String abst;
+    @Column(nullable = false)
+    private String resp;
+    @Column(nullable = false)
+    private String profile;
+    @Column(nullable = false)
+    private String duration;
+    @Column(nullable = false)
+    private String salary;
+
+
 
     public vacancy(){}
 
-    public vacancy(String title, LocalDateTime time) {
+    public vacancy(String title, String description) {
         this.title = title;
+        this.description = description;
+    }
+
+
+    public vacancy(String title, String description, LocalDateTime time, String abst, String resp, String profile, String duration, String salary) {
+        this.title = title;
+        this.description = description;
         this.time = time;
+        this.abst = abst;
+        this.resp = resp;
+        this.profile = profile;
+        this.duration = duration;
+        this.salary = salary;
     }
 
     public String getTitle() {
@@ -43,5 +70,53 @@ public class vacancy {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getAbstrac() {
+        return abst;
+    }
+
+    public void setAbstrac(String abst) {
+        this.abst = abst;
+    }
+
+    public String getResponsabilities() {
+        return resp;
+    }
+
+    public void setResponsabilities(String resp) {
+        this.resp = resp;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
 }
