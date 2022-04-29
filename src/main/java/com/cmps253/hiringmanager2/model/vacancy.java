@@ -12,19 +12,19 @@ public class vacancy {
     private long id;
     @Column(nullable = false)
     private String title;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String description;
     @Column(nullable =true)
     private LocalDateTime time;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String abst;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String resp;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String profile;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String duration;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String salary;
 
 
