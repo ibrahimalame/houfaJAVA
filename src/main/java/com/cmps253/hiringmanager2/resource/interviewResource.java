@@ -29,6 +29,11 @@ public class interviewResource {
         interview updateInterview = interviewService.updateInterview(interview);
         return new ResponseEntity<>(updateInterview, HttpStatus.OK);
     }
+    @PutMapping("/add")
+    public ResponseEntity<interview> addInterview(@RequestBody interview interview) {
+        interview updateInterview = interviewService.updateInterview(interview);
+        return new ResponseEntity<>(updateInterview, HttpStatus.OK);
+    }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteInterview(@PathVariable("id") Long id) {
         interviewService.deleteInterview(id);
